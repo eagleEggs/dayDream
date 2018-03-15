@@ -16,3 +16,8 @@ Make backups!!! This tool literally overwrites the file you specify to overlay i
 ![anim1](https://github.com/eagleEggs/dayDream/blob/master/Screenshots/dayDreamGif02.gif)
 
 ![anim1](https://github.com/eagleEggs/dayDream/blob/master/Screenshots/dayDreamGif03.gif)
+
+
+#### Notes
+
+Check out Kodelife! It's awesome!!! https://hexler.net/software/kodelife

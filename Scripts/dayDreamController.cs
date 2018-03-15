@@ -7,40 +7,33 @@ using UnityEditor;
 
 public class dayDreamController : MonoBehaviour {
 
-	[SerializeField] private Camera mainCamera;
-    [SerializeField] private Material shaderPath;
-
-	[SerializeField] private string codeString = "hey";
-	[SerializeField] private string codeString2 = "hey2";
-	[SerializeField] private string stringToEdit = "hey";
-	private GameObject windowCam;
-	public TextAsset textFile;
-	public InputField mainInputField;
+    private Material shaderPath;
+	private string codeString = "hey";
+	private string codeString2 = "hey2";
+	private string stringToEdit = "hey";
+    private TextAsset textFile;
+    [SerializeField] private InputField mainInputField;
 	private Vector2 scrollPosition;
-	public Button saveButton;
-	public Button loadButton;
-	public string text;
-	public string text2;
-	public string text3;
+    [SerializeField] private Button saveButton;
+    [SerializeField] private Button loadButton;
+    private string text;
+    private string text2;
+    private string text3;
 
 
 	// Use this for initialization
 
 	void Start () {
-		
-	Button btn = saveButton.GetComponent<Button>();
-    btn.onClick.AddListener(WriteString);
 
     Button btn2 = loadButton.GetComponent<Button>();
     btn2.onClick.AddListener(ReadString);
 
-	windowCam = GameObject.Find( "SceneCamera" );
+    Button btna = saveButton.GetComponent<Button>(); // for some reason this isn't working
+    btna.onClick.AddListener(WriteString);
 		
 
 	}
 	
-	
-
 	// Update is called once per frame
 
 public void ReadString()
@@ -69,28 +62,22 @@ public void WriteString()
 
     }       
 
-	void OnGUI(){
+    void OnGUI()
+    {
 
 
 
-	}
-	
+    }
+
     void Update(){
 
         if ((Input.GetKey(KeyCode.RightControl) || Input.GetKey(KeyCode.LeftControl)) && Input.GetKeyDown(KeyCode.Z))
         {
-            // load script
+            ReadString();
         }
         if ((Input.GetKey(KeyCode.RightControl) || Input.GetKey(KeyCode.LeftControl)) && Input.GetKeyDown(KeyCode.X))
         {
-            string path = "Assets/dayDream/Shaders/dayDreamShader.shader";
-            StreamWriter writer = new StreamWriter(path);
-            text2 = mainInputField.text;
-            writer.WriteLine(text2);
-            writer.Close();
-
-            mainInputField.text = text2;
-            AssetDatabase.Refresh();
+            WriteString();
         }
         if ((Input.GetKey(KeyCode.RightControl) || Input.GetKey(KeyCode.LeftControl)) && Input.GetKeyDown(KeyCode.R))
         {
@@ -116,6 +103,7 @@ public void WriteString()
 
 
     }
+
 
 }
 

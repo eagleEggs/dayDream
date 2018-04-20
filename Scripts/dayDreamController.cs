@@ -7,11 +7,6 @@ using UnityEditor;
 
 public class dayDreamController : MonoBehaviour {
 
-    private Material shaderPath;
-	private string codeString = "hey";
-	private string codeString2 = "hey2";
-	private string stringToEdit = "hey";
-    private TextAsset textFile;
     [SerializeField] private InputField mainInputField;
 	private Vector2 scrollPosition;
     [SerializeField] private Button saveButton;
@@ -61,13 +56,6 @@ public void WriteString()
         AssetDatabase.Refresh();
 
     }       
-
-    void OnGUI()
-    {
-
-
-
-    }
 
     void Update(){
 

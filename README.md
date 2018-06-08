@@ -1,4 +1,4 @@
-# dayDream
+# dayDream ![Packagist](https://img.shields.io/badge/Status-Stable-green.svg?style=plastic) ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg?style=plastic) ![Packagist](https://img.shields.io/badge/Platform-Unity3d-black.svg?style=plastic) ![Packagist](https://img.shields.io/badge/Languages-C%23-orange.svg?style=plastic)
 
 Load a script into game view and edit it live on a code overlay with your effects rendering in realtime in the background.
 
